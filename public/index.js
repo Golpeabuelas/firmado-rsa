@@ -48,5 +48,15 @@ async function firmar() {
     }
 }
 
+function descargarLlave(tipo) {
+    const link = document.createElement('a');
+    link.href = `/descargar-llave/${tipo}`;
+    link.download = tipo === 'privada' ? 'private.key' : 'public.key';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+}
+
+window.descargarLlave = descargarLlave;
 window.generar = generar;
 window.firmar = firmar;
