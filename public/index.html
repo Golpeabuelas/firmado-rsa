@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Apruebeme añeñe</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>RSA</h1>
+
+        <textarea id="mensaje" placeholder="Escribe el mensaje"></textarea>
+
+        <select id="hash">
+            <option value="sha256">SHA-256</option>
+            <option value="md5">MD5</option>
+        </select>
+
+        <div>
+            <button onclick="firmar()">Firmar mensaje</button>
+            <button onclick="generar()">Generar llaves</button>
+        </div>
+
+        <p id="resultado"></p>
+    </div>
+
+    <script src="/index.js" type="module"></script>
+</body>
+</html>
